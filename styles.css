@@ -32,6 +32,20 @@ body {
   overflow-x: hidden;
 }
 
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+li,
+a {
+  color: var(--text);
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -79,9 +93,9 @@ button {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   backdrop-filter: blur(14px);
-  background: rgba(5, 5, 5, 0.78);
+  background: rgba(5, 5, 5, 0.85);
   border-bottom: 1px solid var(--border);
 }
 
@@ -89,7 +103,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
   min-height: 80px;
 }
 
@@ -99,6 +113,7 @@ button {
   gap: 8px;
   font-weight: 900;
   letter-spacing: 0.08em;
+  flex-shrink: 0;
 }
 
 .logo-main {
@@ -122,6 +137,7 @@ button {
   font-weight: 700;
   transition: 0.25s ease;
   position: relative;
+  padding: 6px 0;
 }
 
 .nav a:hover,
@@ -138,6 +154,49 @@ button {
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, var(--pink), var(--pink-soft));
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.social-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 18px;
+  margin-left: 8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.social-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+.social-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  transition: 0.25s ease;
+  font-size: 1rem;
+}
+
+.social-nav a:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--pink-soft);
+  box-shadow: var(--shadow-pink);
 }
 
 .menu-btn,
@@ -163,10 +222,12 @@ button {
 
 .section {
   padding: 72px 0;
+  position: relative;
+  z-index: 2;
 }
 
 .page-top {
-  padding-top: 88px;
+  padding-top: 110px;
 }
 
 .hero-grid,
@@ -179,6 +240,17 @@ button {
   align-items: center;
 }
 
+.hero-copy,
+.section-heading,
+.feature-copy,
+.hero-card,
+.feature-image,
+.join-layout > *,
+.payment-grid > * {
+  position: relative;
+  z-index: 2;
+}
+
 .hero-copy h1,
 .section-heading h1,
 .section-heading h2,
@@ -188,6 +260,7 @@ button {
   line-height: 0.95;
   margin: 0 0 18px;
   text-transform: uppercase;
+  color: var(--text);
 }
 
 .section-heading h2 {
@@ -266,6 +339,7 @@ button {
 .btn-outline {
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
 }
 
 .hero-card,
@@ -358,6 +432,7 @@ button {
 .testimonial-card strong,
 .steps-panel h2 {
   margin: 0 0 12px;
+  color: var(--text);
 }
 
 .band-section {
@@ -469,7 +544,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .lightbox.show {
@@ -526,6 +601,7 @@ button {
     border: 1px solid var(--border);
     background: rgba(10, 10, 12, 0.96);
     box-shadow: var(--shadow);
+    z-index: 999;
   }
 
   .nav.open {
@@ -549,6 +625,21 @@ button {
 
   .nav-wrap {
     min-height: 74px;
+  }
+
+  .header-right {
+    gap: 10px;
+  }
+
+  .social-nav {
+    padding-left: 0;
+    margin-left: 0;
+    border-left: none;
+    gap: 10px;
+  }
+
+  .social-label {
+    display: none;
   }
 
   .reverse-mobile .feature-copy {
@@ -585,5 +676,10 @@ button {
 
   .step-card {
     grid-template-columns: 1fr;
+  }
+
+  .social-nav a {
+    width: 34px;
+    height: 34px;
   }
 }
