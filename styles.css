@@ -1,0 +1,67 @@
+:root {
+    padding: 18px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: rgba(10, 10, 12, 0.96);
+    box-shadow: var(--shadow);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-grid,
+  .split-feature,
+  .join-layout,
+  .payment-grid,
+  .cols-3,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-wrap {
+    min-height: 74px;
+  }
+
+  .reverse-mobile .feature-copy {
+    order: 2;
+  }
+
+  .reverse-mobile .feature-image {
+    order: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .section,
+  .page-top {
+    padding: 56px 0;
+  }
+
+  .hero-copy h1,
+  .section-heading h1,
+  .section-heading h2,
+  .feature-copy h2,
+  .pricing-card h1 {
+    line-height: 1.02;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-cta,
+  .join-buttons {
+    flex-direction: column;
+  }
+
+  .step-card {
+    grid-template-columns: 1fr;
+  }
+}
