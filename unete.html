@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aleli Japa | Únete</title>
+  <meta name="description" content="Únete al reto de Aleli Japa y sigue los pasos para realizar tu pago y enviar el comprobante." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow glow-left"></div>
+  <div class="bg-glow glow-right"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">
+        <span class="logo-main">ALELI</span>
+        <span class="logo-accent">JAPA</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+        <a href="reto.html" data-es="Reto" data-en="Challenge">Reto</a>
+        <a href="unete.html" class="active" data-es="Únete" data-en="Join">Únete</a>
+        <a href="resultados.html" data-es="Resultados" data-en="Results">Resultados</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://wa.me/18492075776" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+
+      <button class="lang-btn" id="langBtn">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-top">
+      <div class="container join-layout">
+        <div class="pricing-card reveal">
+          <p class="eyebrow" data-es="Reserva tu espacio" data-en="Reserve your spot">Reserva tu espacio</p>
+          <h1>$1,200 DOP <span>|</span> $20 USD</h1>
+          <p data-es="No importa en qué país estés, puedes unirte al reto." data-en="No matter what country you are in, you can join the challenge.">
+            No importa en qué país estés, puedes unirte al reto.
+          </p>
+
+          <div class="join-buttons">
+            <a href="https://wa.me/18492075776" target="_blank" rel="noopener" class="btn btn-primary" data-es="Enviar comprobante" data-en="Send proof of payment">Enviar comprobante</a>
+            <a href="#paymentOptions" class="btn btn-outline" data-es="Ver opciones de pago" data-en="See payment options">Ver opciones de pago</a>
+          </div>
+        </div>
+
+        <div class="steps-panel reveal delay-1">
+          <h2 data-es="¿Cómo entrar al reto?" data-en="How do you join the challenge?">¿Cómo entrar al reto?</h2>
+
+          <div class="step-card">
+            <span>1</span>
+            <div>
+              <h3 data-es="Realiza el pago" data-en="Make the payment">Realiza el pago</h3>
+              <p data-es="Usa el método de pago indicado por Aleli." data-en="Use the payment method indicated by Aleli.">
+                Usa el método de pago indicado por Aleli.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <span>2</span>
+            <div>
+              <h3 data-es="Envía tu comprobante" data-en="Send your payment proof">Envía tu comprobante</h3>
+              <p data-es="Hazlo por WhatsApp para validar tu acceso." data-en="Send it through WhatsApp to validate your access.">
+                Hazlo por WhatsApp para validar tu acceso.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <span>3</span>
+            <div>
+              <h3 data-es="Recibe indicaciones" data-en="Receive instructions">Recibe indicaciones</h3>
+              <p data-es="Luego se te enviarán los pasos para comenzar y acceder al grupo." data-en="Then you will receive the next steps to start and access the group.">
+                Luego se te enviarán los pasos para comenzar y acceder al grupo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="paymentOptions">
+      <div class="container payment-grid">
+        <div class="payment-box reveal">
+          <p class="eyebrow" data-es="Opciones de pago" data-en="Payment options">Opciones de pago</p>
+          <ul class="clean-list">
+            <li data-es="Transferencia bancaria" data-en="Bank transfer">Transferencia bancaria</li>
+            <li data-es="Pago móvil" data-en="Mobile payment">Pago móvil</li>
+            <li data-es="Link externo de pago" data-en="External payment link">Link externo de pago</li>
+          </ul>
+          <p class="small-note" data-es="Cambia esta lista por los métodos reales que te pase la clienta." data-en="Replace this list with the real methods the client gives you.">
+            Cambia esta lista por los métodos reales que te pase la clienta.
+          </p>
+        </div>
+
+        <div class="payment-box reveal delay-1">
+          <p class="eyebrow" data-es="Código QR" data-en="QR code">Código QR</p>
+          <img src="images/qr-pago.png" alt="Código QR para pago" class="qr-display zoomable" />
+          <p class="small-note" data-es="Si no tienen QR todavía, aquí puedes poner una imagen temporal o eliminar esta sección." data-en="If they do not have a QR yet, you can place a temporary image here or remove this section.">
+            Si no tienen QR todavía, aquí puedes poner una imagen temporal o eliminar esta sección.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">×</button>
+    <img id="lightboxImg" src="" alt="Vista ampliada" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
