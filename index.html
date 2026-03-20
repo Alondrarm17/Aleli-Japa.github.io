@@ -6,6 +6,7 @@
   <title>Aleli Japa | Inicio</title>
   <meta name="description" content="Reto de 28 días con Aleli Japa. Alimentación, entrenamiento, coaching y resultados reales." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <div class="bg-glow glow-left"></div>
@@ -25,26 +26,41 @@
         <a href="reto.html" data-es="Reto" data-en="Challenge">Reto</a>
         <a href="unete.html" data-es="Únete" data-en="Join">Únete</a>
         <a href="resultados.html" data-es="Resultados" data-en="Results">Resultados</a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://wa.me/18492075776" target="_blank" rel="noopener">WhatsApp</a>
       </nav>
 
-      <button class="lang-btn" id="langBtn">EN</button>
+      <div class="header-right">
+        <div class="social-nav">
+          <span class="social-label" data-es="Sígueme" data-en="Follow">Sígueme</span>
+
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+
+          <a href="https://wa.me/18492075776" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <button class="lang-btn" id="langBtn">EN</button>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="section hero-section">
+    <section class="section page-top hero-section">
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
+        <div class="hero-copy reveal visible">
           <p class="eyebrow" data-es="Transforma tu proceso" data-en="Transform your journey">Transforma tu proceso</p>
           <h1 data-es="Reto de 28 días con Aleli Japa" data-en="28-day challenge with Aleli Japa">Reto de 28 días con Aleli Japa</h1>
           <p class="lead" data-es="Un programa pensado para ayudarte a mejorar tus hábitos, entrenar con estructura y mantenerte motivada con apoyo real." data-en="A program designed to help you improve your habits, train with structure, and stay motivated with real support.">
             Un programa pensado para ayudarte a mejorar tus hábitos, entrenar con estructura y mantenerte motivada con apoyo real.
           </p>
 
-          <div class="hero-buttons">
+          <div class="hero-cta">
             <a href="unete.html" class="btn btn-primary" data-es="Unirme al reto" data-en="Join the challenge">Unirme al reto</a>
             <a href="resultados.html" class="btn btn-outline" data-es="Ver resultados" data-en="See results">Ver resultados</a>
           </div>
@@ -57,16 +73,16 @@
           </div>
         </div>
 
-        <div class="hero-card reveal delay-1">
+        <div class="hero-card reveal delay-1 visible">
           <img src="images/reto-flyer.jpg" alt="Flyer del reto de 28 días de Aleli Japa" class="zoomable" />
-          <div class="floating-badge">28 DÍAS</div>
+          <div class="hero-card-badge">28 DÍAS</div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-heading reveal center-text">
+        <div class="section-heading reveal center-text visible">
           <p class="eyebrow" data-es="Una experiencia completa" data-en="A complete experience">Una experiencia completa</p>
           <h2 data-es="Un sitio claro, moderno y fácil de usar" data-en="A clear, modern, and easy-to-use website">Un sitio claro, moderno y fácil de usar</h2>
           <p data-es="La idea es que la clienta entienda rápido qué incluye el reto, vea resultados y sepa exactamente cómo unirse." data-en="The goal is for the customer to quickly understand what the challenge includes, see results, and know exactly how to join.">
@@ -75,7 +91,7 @@
         </div>
 
         <div class="card-grid cols-3">
-          <article class="glass-card reveal">
+          <article class="info-card reveal visible">
             <div class="icon-bubble">01</div>
             <h3 data-es="Información clara" data-en="Clear information">Información clara</h3>
             <p data-es="Explica qué incluye el reto, cómo funciona y qué recibe cada persona al entrar." data-en="Explains what the challenge includes, how it works, and what each person gets when joining.">
@@ -83,7 +99,7 @@
             </p>
           </article>
 
-          <article class="glass-card reveal delay-1">
+          <article class="info-card reveal delay-1 visible">
             <div class="icon-bubble">02</div>
             <h3 data-es="Proceso simple" data-en="Simple process">Proceso simple</h3>
             <p data-es="Botones funcionales, acceso a WhatsApp y pasos claros para enviar pago y comprobante." data-en="Working buttons, direct WhatsApp access, and clear steps for payment and proof.">
@@ -91,7 +107,7 @@
             </p>
           </article>
 
-          <article class="glass-card reveal delay-2">
+          <article class="info-card reveal delay-2 visible">
             <div class="icon-bubble">03</div>
             <h3 data-es="Prueba social" data-en="Social proof">Prueba social</h3>
             <p data-es="Fotos, testimonios y resultados para generar confianza y ayudar a vender el reto." data-en="Photos, testimonials, and results to build trust and help sell the challenge.">
@@ -103,12 +119,12 @@
     </section>
 
     <section class="section band-section">
-      <div class="container split-grid">
-        <div class="feature-image reveal">
+      <div class="container split-feature">
+        <div class="feature-image reveal visible">
           <img src="images/reto-flyer.jpg" alt="Promoción del reto" class="zoomable rounded-img" />
         </div>
 
-        <div class="feature-copy reveal delay-1">
+        <div class="feature-copy reveal delay-1 visible">
           <p class="eyebrow" data-es="Inspirado en tu flyer" data-en="Inspired by your flyer">Inspirado en tu flyer</p>
           <h2 data-es="Negro, plateado y fucsia para una imagen fitness premium" data-en="Black, silver, and fuchsia for a premium fitness look">Negro, plateado y fucsia para una imagen fitness premium</h2>
           <p data-es="El diseño usa el estilo visual que me mostraste: fondo oscuro, acentos rosados, bloques modernos, botones marcados y una apariencia más profesional." data-en="The design uses the visual style you showed me: dark background, pink accents, modern sections, strong buttons, and a more professional look.">
