@@ -243,12 +243,15 @@ button {
 .hero-copy,
 .section-heading,
 .feature-copy,
-.hero-card,
 .feature-image,
 .join-layout > *,
 .payment-grid > * {
   position: relative;
   z-index: 2;
+}
+
+.hero-copy {
+  z-index: 3;
 }
 
 .hero-copy h1,
@@ -342,7 +345,74 @@ button {
   color: var(--text);
 }
 
+/* UPDATED HERO */
+.hero-section {
+  overflow: hidden;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 760px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: 30px;
+  top: 120px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 200, 0.42) 0%,
+    rgba(255, 0, 200, 0.18) 35%,
+    transparent 72%
+  );
+  filter: blur(55px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-person {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 760px;
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 34px 70px rgba(0, 0, 0, 0.55));
+}
+
+.hero-visual-content {
+  position: absolute;
+  right: 18px;
+  bottom: 34px;
+  z-index: 2;
+  text-align: right;
+  pointer-events: none;
+}
+
+.hero-visual-content h2 {
+  margin: 0;
+  font-size: clamp(3.6rem, 8vw, 6.4rem);
+  line-height: 0.88;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.16);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* hide old hero flyer styles */
 .hero-card,
+.hero-card-badge {
+  display: none;
+}
+
 .info-card,
 .feature-card,
 .pricing-card,
@@ -356,28 +426,10 @@ button {
   box-shadow: var(--shadow);
 }
 
-.hero-card {
-  padding: 16px;
-  position: relative;
-}
-
-.hero-card img,
 .rounded-img,
 .qr-display,
 .gallery img {
   border-radius: 18px;
-}
-
-.hero-card-badge {
-  position: absolute;
-  right: 26px;
-  top: 26px;
-  background: linear-gradient(135deg, var(--pink), var(--pink-soft));
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  box-shadow: var(--shadow-pink);
 }
 
 .section-heading {
@@ -623,6 +675,32 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .hero-visual {
+    min-height: 520px;
+    margin-top: 10px;
+  }
+
+  .hero-person {
+    position: relative;
+    right: auto;
+    max-height: 520px;
+    margin: 0 auto;
+  }
+
+  .hero-glow {
+    left: 50%;
+    right: auto;
+    top: 80px;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 320px;
+  }
+
+  .hero-visual-content {
+    right: 10px;
+    bottom: 10px;
+  }
+
   .nav-wrap {
     min-height: 74px;
   }
@@ -663,6 +741,18 @@ button {
   .feature-copy h2,
   .pricing-card h1 {
     line-height: 1.02;
+  }
+
+  .hero-visual {
+    min-height: 420px;
+  }
+
+  .hero-person {
+    max-height: 420px;
+  }
+
+  .hero-visual-content h2 {
+    font-size: 3.4rem;
   }
 
   .btn {
