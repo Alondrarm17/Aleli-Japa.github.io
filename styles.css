@@ -239,7 +239,7 @@ button {
 }
 
 .page-top {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .hero-grid,
@@ -377,7 +377,7 @@ button {
 .hero-section {
   overflow: hidden;
   min-height: auto;
-  padding-top: 20px;
+  padding-top: 10px;
   display: flex;
   align-items: center;
   padding-bottom: 56px;
