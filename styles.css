@@ -227,19 +227,19 @@ button {
 }
 
 .lang-btn {
-  min-width: 50px;
+  min-width: 0px;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .section {
-  padding: 7px 0;
+  padding: 72px 0;
   position: relative;
   z-index: 2;
 }
 
 .page-top {
-  padding-top: 9px;
+  padding-top: 92px;
 }
 
 .hero-grid,
