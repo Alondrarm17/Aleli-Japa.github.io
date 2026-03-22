@@ -13,6 +13,7 @@
   --shadow-pink: 0 18px 40px rgba(255, 0, 200, 0.2);
   --radius: 24px;
   --max: 1180px;
+  --header-h: 80px;
 }
 
 * {
@@ -103,8 +104,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  min-height: 80px;
+  gap: 18px;
+  min-height: var(--header-h);
 }
 
 .logo {
@@ -159,17 +160,17 @@ button {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 14px;
-  flex-shrink: 1;
+  gap: 10px;
+  flex-shrink: 0;
   min-width: 0;
 }
 
 .social-nav {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding-left: 18px;
-  margin-left: 8px;
+  gap: 10px;
+  padding-left: 16px;
+  margin-left: 4px;
   border-left: 1px solid rgba(255, 255, 255, 0.15);
   flex-wrap: nowrap;
   min-width: 0;
@@ -211,9 +212,15 @@ button {
   background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   border-radius: 999px;
-  padding: 10px 14px;
   cursor: pointer;
   transition: 0.25s ease;
+  height: 40px;
+  min-width: 40px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .menu-btn:hover,
@@ -223,23 +230,24 @@ button {
 
 .menu-btn {
   display: none;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
 .lang-btn {
-  min-width: 0px;
+  min-width: 44px;
   white-space: nowrap;
-  flex-shrink: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .section {
-  padding: 62px 0;
+  padding: 56px 0;
   position: relative;
   z-index: 2;
 }
 
 .page-top {
-  padding-top: 10px;
+  padding-top: 26px;
 }
 
 .hero-grid,
@@ -267,16 +275,6 @@ button {
   max-width: 620px;
 }
 
-.hero-copy,
-.section-heading,
-.feature-copy,
-.feature-image,
-.join-layout > *,
-.payment-grid > * {
-  position: relative;
-  z-index: 2;
-}
-
 .hero-copy h1,
 .section-heading h1,
 .section-heading h2,
@@ -284,7 +282,7 @@ button {
 .pricing-card h1 {
   font-size: clamp(2.3rem, 6vw, 4.8rem);
   line-height: 0.95;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   text-transform: uppercase;
   color: var(--text);
 }
@@ -299,7 +297,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-weight: 800;
-  margin: 0 0 0px;
+  margin: 0 0 10px;
 }
 
 .lead,
@@ -330,7 +328,7 @@ button {
 }
 
 .hero-cta {
-  margin: 28px 0 18px;
+  margin: 24px 0 18px;
 }
 
 .pill-row {
@@ -377,15 +375,15 @@ button {
 .hero-section {
   overflow: hidden;
   min-height: auto;
-  padding-top: 0px;
+  padding-top: 0;
   display: flex;
   align-items: center;
-  padding-bottom: 56px;
+  padding-bottom: 44px;
 }
 
 .hero-visual {
   position: relative;
-  min-height: 560px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -430,7 +428,7 @@ button {
   position: absolute;
   width: 300px;
   height: 70px;
-  bottom: 38px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
@@ -449,7 +447,7 @@ button {
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
@@ -518,7 +516,7 @@ button {
 }
 
 .section-heading {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   max-width: 760px;
 }
 
@@ -725,11 +723,15 @@ button {
 }
 
 @media (max-width: 980px) {
+  :root {
+    --header-h: 74px;
+  }
+
   .nav {
     position: absolute;
     left: 4%;
     right: 4%;
-    top: 78px;
+    top: 72px;
     display: none;
     flex-direction: column;
     align-items: flex-start;
@@ -739,6 +741,7 @@ button {
     background: rgba(10, 10, 12, 0.96);
     box-shadow: var(--shadow);
     z-index: 999;
+    gap: 14px;
   }
 
   .nav.open {
@@ -747,9 +750,6 @@ button {
 
   .menu-btn {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
   }
 
   .split-feature,
@@ -761,56 +761,48 @@ button {
   }
 
   .hero-section {
-    min-height: auto;
-    padding-bottom: 42px;
+    padding-bottom: 36px;
   }
 
   .hero-grid {
-    grid-template-columns: 1.12fr 0.88fr;
+    grid-template-columns: 1.05fr 0.95fr;
     gap: 18px;
     align-items: center;
   }
 
   .hero-visual {
-    min-height: 420px;
-    margin-top: 0;
-    justify-content: flex-end;
+    min-height: 390px;
+    justify-content: center;
   }
 
   .hero-person {
-    max-width: 360px;
-    margin-left: auto;
-    margin-right: 0;
+    max-width: 340px;
   }
 
   .hero-glow {
     width: 220px;
-    height: 56px;
-    bottom: 28px;
+    height: 54px;
+    bottom: 24px;
   }
 
   .hero-visual::before {
-    width: 300px;
-    height: 300px;
+    width: 290px;
+    height: 290px;
   }
 
   .hero-visual::after {
-    width: 260px;
-    height: 360px;
-  }
-
-  .hero-visual-content {
-    right: 10px;
-    bottom: 10px;
+    width: 250px;
+    height: 345px;
   }
 
   .nav-wrap {
-    min-height: 74px;
     gap: 10px;
+    min-height: var(--header-h);
   }
 
   .header-right {
-    gap: 8px;
+    gap: 6px;
+    margin-left: auto;
   }
 
   .social-nav {
@@ -827,13 +819,19 @@ button {
   .social-nav a {
     width: 34px;
     height: 34px;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
+  }
+
+  .menu-btn,
+  .lang-btn {
+    height: 36px;
+    min-width: 36px;
+    padding: 0 10px;
   }
 
   .lang-btn {
-    min-width: 42px;
-    padding: 8px 10px;
-    font-size: 0.8rem;
+    min-width: 40px;
+    font-size: 0.76rem;
   }
 
   .reverse-mobile .feature-copy {
@@ -847,21 +845,60 @@ button {
 
 @media (max-width: 640px) {
   .section {
-    padding: 56px 0;
+    padding: 48px 0;
   }
 
   .page-top {
-    padding-top: 84px;
+    padding-top: 18px;
   }
 
   .hero-section {
-    padding-bottom: 34px;
+    padding-bottom: 28px;
   }
 
   .hero-grid {
-    grid-template-columns: 1.16fr 0.84fr;
-    gap: 10px;
-    align-items: center;
+    display: block;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    float: right;
+    width: min(46vw, 215px);
+    min-height: auto;
+    margin: 6px 0 10px 14px;
+    display: block;
+  }
+
+  .hero-visual::before {
+    width: 180px;
+    height: 180px;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(14px);
+  }
+
+  .hero-visual::after {
+    width: 150px;
+    height: 210px;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%) rotate(-6deg);
+    border-radius: 22px;
+  }
+
+  .hero-glow {
+    width: 110px;
+    height: 34px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-person {
+    max-width: 100%;
+    width: 100%;
   }
 
   .hero-copy h1,
@@ -873,45 +910,13 @@ button {
   }
 
   .hero-copy h1 {
-    font-size: clamp(1.9rem, 7vw, 2.9rem);
+    font-size: clamp(1.85rem, 7vw, 2.6rem);
     margin-bottom: 12px;
   }
 
   .hero-copy .lead {
     font-size: 0.92rem;
     line-height: 1.6;
-  }
-
-  .hero-visual {
-    min-height: 290px;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  .hero-person {
-    max-width: 235px;
-  }
-
-  .hero-visual::before {
-    width: 210px;
-    height: 210px;
-    filter: blur(14px);
-  }
-
-  .hero-visual::after {
-    width: 185px;
-    height: 250px;
-    border-radius: 22px;
-  }
-
-  .hero-glow {
-    width: 150px;
-    height: 42px;
-    bottom: 20px;
-  }
-
-  .hero-visual-content h2 {
-    font-size: 3.4rem;
   }
 
   .btn {
@@ -921,6 +926,11 @@ button {
   .hero-cta,
   .join-buttons {
     flex-direction: column;
+    clear: both;
+  }
+
+  .pill-row {
+    clear: both;
   }
 
   .step-card {
@@ -933,10 +943,21 @@ button {
     font-size: 0.82rem;
   }
 
+  .menu-btn,
   .lang-btn {
-    min-width: 38px;
-    padding: 6px 8px;
-    font-size: 0.74rem;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .menu-btn {
+    font-size: 0.95rem;
+    padding: 0 9px;
+  }
+
+  .lang-btn {
+    min-width: 36px;
+    padding: 0 7px;
+    font-size: 0.7rem;
   }
 }
 
@@ -946,20 +967,23 @@ button {
   }
 
   .nav-wrap {
-    gap: 8px;
+    gap: 6px;
+  }
+
+  .logo {
+    gap: 4px;
   }
 
   .logo-main {
-    font-size: 1rem;
-  }
-
-  .logo-accent {
     font-size: 0.95rem;
   }
 
-  .hero-grid {
-    grid-template-columns: 1.22fr 0.78fr;
-    gap: 8px;
+  .logo-accent {
+    font-size: 0.9rem;
+  }
+
+  .page-top {
+    padding-top: 14px;
   }
 
   .eyebrow {
@@ -969,7 +993,7 @@ button {
   }
 
   .hero-copy h1 {
-    font-size: clamp(1.55rem, 7vw, 2.1rem);
+    font-size: clamp(1.5rem, 7vw, 2rem);
     line-height: 1.04;
   }
 
@@ -977,28 +1001,25 @@ button {
     font-size: 0.84rem;
   }
 
-  .hero-person {
-    max-width: 190px;
-  }
-
   .hero-visual {
-    min-height: 240px;
+    width: min(44vw, 170px);
+    margin: 4px 0 8px 10px;
   }
 
   .hero-visual::before {
-    width: 165px;
-    height: 165px;
+    width: 145px;
+    height: 145px;
   }
 
   .hero-visual::after {
-    width: 145px;
-    height: 205px;
+    width: 125px;
+    height: 180px;
   }
 
   .hero-glow {
-    width: 110px;
-    height: 34px;
-    bottom: 16px;
+    width: 92px;
+    height: 28px;
+    bottom: 8px;
   }
 
   .social-nav {
@@ -1011,9 +1032,14 @@ button {
     font-size: 0.76rem;
   }
 
+  .menu-btn,
   .lang-btn {
-    min-width: 36px;
-    padding: 6px 7px;
-    font-size: 0.7rem;
+    height: 30px;
+    min-width: 30px;
+  }
+
+  .lang-btn {
+    min-width: 34px;
+    font-size: 0.68rem;
   }
 }
