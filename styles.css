@@ -382,7 +382,7 @@ button {
   bottom: 0;
   right: 0;
   max-height: none;
-  height: 200%
+  height: 200%;
   width: auto;
   object-fit: contain;
   z-index: 2;
