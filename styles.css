@@ -381,7 +381,8 @@ button {
   position: absolute;
   bottom: 0;
   right: 0;
-  max-height: 760px;
+  max-height: none;
+  height: 200%
   width: auto;
   object-fit: contain;
   z-index: 2;
